@@ -22,7 +22,7 @@ is the parts where the rules live.
 | **tables** | `src/store.py`: DynamoDB when deployed, SQLite on your laptop, with conditional writes | given |
 | **model** | `src/agent/model.py`: Gemini over HTTP; records every live response for replay | given |
 | **functions and API** | `src/function/handlers.py` and `deploy.sh` | given |
-| **suite** | `data/suite/tickets.jsonl`, `run_suite.py`, `check_server.py` | given |
+| **suite** | `data/suite/tickets.jsonl`, `run_suite.py`, `check_server.py`, `ticket.py` | given |
 
 Deployed, each server and the agent run as their own function behind one API:
 `POST /mcp/orders`, `POST /mcp/payments`, `POST /tickets`, `GET /runs/{id}`,
@@ -48,6 +48,46 @@ uv run run_suite.py                        # the whole suite, live
 uv run run_suite.py --replay               # the same, from the recordings: no model, no key
 uv run score.py data/results/<file>.json
 ```
+
+## Deploying
+
+You write no infrastructure. `./deploy.sh` packages the repository and creates everything in
+your Learner Lab account: one HTTP API, five DynamoDB tables, and four functions, each running
+part of your code.
+
+| Function | Routes | Runs |
+|---|---|---|
+| `p3-orders` | `POST /mcp/orders` | the orders server (given) |
+| `p3-payments` | `POST /mcp/payments` | **your** `src/servers/payments.py` |
+| `p3-api` | `POST /tickets` · `GET /runs/{id}` · `POST /runs/{id}/resume` · `GET /approvals` · `POST /approvals/{id}` | **your** `runs.start`, `runs.get`, `runs.decide` and `runs.waiting`. It answers at once and starts the worker. |
+| `p3-worker` | none: `p3-api` starts it | **your** `runs.advance`, and through it your loop. It runs steps until the run is finished, and when its time is nearly up it starts itself again. |
+
+The agent is split in two because an API request is cut off after 29 seconds, and a run takes
+longer.
+
+**A public address, with a token.** The API gets a public HTTPS address,
+`https://<id>.execute-api.us-east-1.amazonaws.com`, reachable from anywhere. Every route checks
+the token `deploy.sh` creates and saves in `.env`: a request without it in the `x-lab-token`
+header gets a 401. The scripts here send it for you. Any MCP client with the token can reach
+your payments server too.
+
+- Never commit `.env`. It holds your token and your Gemini key, and anyone with them can call
+  your API and spend your budget. The template's `.gitignore` already excludes it.
+- Do not remove `LAB_TOKEN` from a function's settings: with no token set, the routes are open.
+
+**In order:**
+
+1. `./deploy.sh`, again after every change. It prints your API URL and saves it to `.env` as
+   `API_URL`.
+2. `uv run check_server.py $API_URL/mcp/payments`: your payments server, deployed.
+3. `uv run ticket.py T01`: one ticket against your API. `uv run ticket.py T04`, then
+   `uv run approve.py <approval_id> --url $API_URL`, for one that waits for a person.
+4. `uv run run_suite.py --url $API_URL`: the whole suite, scored from your deployed tables.
+
+When something fails, read the function's log, for example
+`aws logs tail /aws/lambda/p3-worker --since 10m`. A run that stays `running` for minutes
+usually means the worker failed: its log says why. `./teardown.sh` removes everything when you
+are done.
 
 ## Deliverables
 
