@@ -1,0 +1,9 @@
+[project]
+name = "make-it-act"
+version = "0.1.0"
+description = "AI Systems Engineering, P3: a refund agent on its own tool servers, with runs that survive being killed."
+requires-python = ">=3.12"
+dependencies = ["python-dotenv>=1.0", "boto3>=1.35"]
+
+[tool.uv]
+package = false

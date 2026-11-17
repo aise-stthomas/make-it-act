@@ -1,0 +1,717 @@
+{
+ "customers": {
+  "C-1042": {
+   "name": "Dana Ruiz",
+   "card": "visa ending 4412"
+  },
+  "C-2210": {
+   "name": "Sam Okafor",
+   "card": "mastercard ending 0937"
+  },
+  "C-3315": {
+   "name": "Lee Park",
+   "card": "visa ending 7781"
+  },
+  "C-4120": {
+   "name": "Ana Silva",
+   "card": "visa ending 2290"
+  },
+  "C-5007": {
+   "name": "Raj Mehta",
+   "card": "amex ending 1005"
+  },
+  "C-6033": {
+   "name": "Mei Chen",
+   "card": "mastercard ending 6610"
+  },
+  "C-9999": {
+   "name": "Check Account",
+   "card": "visa ending 0000"
+  }
+ },
+ "orders": [
+  {
+   "order_id": "88213",
+   "customer_id": "C-1042",
+   "created_at": "2026-11-12T14:02:09Z",
+   "status": "shipped",
+   "total_cents": 3800,
+   "items": [
+    {
+     "name": "Stoneware mug, set of 2",
+     "qty": 1,
+     "price_cents": 3800
+    }
+   ]
+  },
+  {
+   "order_id": "88400",
+   "customer_id": "C-4120",
+   "created_at": "2026-11-12T16:40:02Z",
+   "status": "shipped",
+   "total_cents": 2250,
+   "items": [
+    {
+     "name": "Linen napkins, set of 4",
+     "qty": 1,
+     "price_cents": 2250
+    }
+   ]
+  },
+  {
+   "order_id": "88577",
+   "customer_id": "C-5007",
+   "created_at": "2026-11-13T08:11:30Z",
+   "status": "shipped",
+   "total_cents": 4500,
+   "items": [
+    {
+     "name": "Pour-over kettle",
+     "qty": 1,
+     "price_cents": 4500
+    }
+   ]
+  },
+  {
+   "order_id": "90117",
+   "customer_id": "C-2210",
+   "created_at": "2026-11-13T09:41:03Z",
+   "status": "shipped",
+   "total_cents": 8400,
+   "items": [
+    {
+     "name": "Desk lamp, brass",
+     "qty": 1,
+     "price_cents": 8400
+    }
+   ]
+  },
+  {
+   "order_id": "90230",
+   "customer_id": "C-6033",
+   "created_at": "2026-11-14T19:05:44Z",
+   "status": "shipped",
+   "total_cents": 12000,
+   "items": [
+    {
+     "name": "Wool throw blanket",
+     "qty": 1,
+     "price_cents": 12000
+    }
+   ]
+  },
+  {
+   "order_id": "90388",
+   "customer_id": "C-3315",
+   "created_at": "2026-11-14T12:30:10Z",
+   "status": "shipped",
+   "total_cents": 5610,
+   "items": [
+    {
+     "name": "Ceramic planter, large",
+     "qty": 1,
+     "price_cents": 5610
+    }
+   ]
+  },
+  {
+   "order_id": "77310",
+   "customer_id": "C-3315",
+   "created_at": "2026-11-15T18:20:00Z",
+   "status": "processing",
+   "total_cents": 12950,
+   "items": [
+    {
+     "name": "Reading chair cushion",
+     "qty": 1,
+     "price_cents": 12950
+    }
+   ]
+  },
+  {
+   "order_id": "77455",
+   "customer_id": "C-4120",
+   "created_at": "2026-11-15T10:02:00Z",
+   "status": "shipped",
+   "total_cents": 3000,
+   "items": [
+    {
+     "name": "Gift card",
+     "qty": 1,
+     "price_cents": 3000
+    }
+   ]
+  },
+  {
+   "order_id": "77456",
+   "customer_id": "C-4120",
+   "created_at": "2026-11-15T10:09:31Z",
+   "status": "shipped",
+   "total_cents": 3000,
+   "items": [
+    {
+     "name": "Gift card",
+     "qty": 1,
+     "price_cents": 3000
+    }
+   ]
+  },
+  {
+   "order_id": "77590",
+   "customer_id": "C-5007",
+   "created_at": "2026-11-10T13:15:00Z",
+   "status": "shipped",
+   "total_cents": 6400,
+   "items": [
+    {
+     "name": "Bookshelf speakers",
+     "qty": 1,
+     "price_cents": 6400
+    }
+   ]
+  },
+  {
+   "order_id": "91002",
+   "customer_id": "C-6033",
+   "created_at": "2026-11-16T11:00:00Z",
+   "status": "shipped",
+   "total_cents": 40000,
+   "items": [
+    {
+     "name": "Standing desk",
+     "qty": 1,
+     "price_cents": 40000
+    }
+   ]
+  },
+  {
+   "order_id": "91150",
+   "customer_id": "C-1042",
+   "created_at": "2026-11-16T15:22:00Z",
+   "status": "shipped",
+   "total_cents": 6000,
+   "items": [
+    {
+     "name": "Cast-iron skillet",
+     "qty": 1,
+     "price_cents": 6000
+    }
+   ]
+  },
+  {
+   "order_id": "91240",
+   "customer_id": "C-2210",
+   "created_at": "2026-11-16T17:45:00Z",
+   "status": "shipped",
+   "total_cents": 9000,
+   "items": [
+    {
+     "name": "Espresso grinder",
+     "qty": 1,
+     "price_cents": 9000
+    }
+   ]
+  },
+  {
+   "order_id": "92010",
+   "customer_id": "C-6033",
+   "created_at": "2026-11-14T09:00:00Z",
+   "status": "shipped",
+   "total_cents": 3000,
+   "items": [
+    {
+     "name": "Candle set",
+     "qty": 1,
+     "price_cents": 3000
+    }
+   ]
+  },
+  {
+   "order_id": "92020",
+   "customer_id": "C-3315",
+   "created_at": "2026-11-14T10:00:00Z",
+   "status": "shipped",
+   "total_cents": 2500,
+   "items": [
+    {
+     "name": "Tea towels",
+     "qty": 1,
+     "price_cents": 2500
+    }
+   ]
+  },
+  {
+   "order_id": "92030",
+   "customer_id": "C-2210",
+   "created_at": "2026-11-14T11:00:00Z",
+   "status": "shipped",
+   "total_cents": 4400,
+   "items": [
+    {
+     "name": "Cutting board",
+     "qty": 1,
+     "price_cents": 4400
+    }
+   ]
+  },
+  {
+   "order_id": "99001",
+   "customer_id": "C-9999",
+   "created_at": "2026-11-01T00:00:00Z",
+   "status": "shipped",
+   "total_cents": 1000,
+   "items": [
+    {
+     "name": "Used by check_server.py only",
+     "qty": 1,
+     "price_cents": 1000
+    }
+   ]
+  }
+ ],
+ "charges": [
+  {
+   "charge_id": "ch_7730",
+   "order_id": "88213",
+   "amount_cents": 3800,
+   "status": "captured",
+   "at": "2026-11-12T14:02:12Z",
+   "request_id": "req_a1"
+  },
+  {
+   "charge_id": "ch_7731",
+   "order_id": "88213",
+   "amount_cents": 3800,
+   "status": "captured",
+   "at": "2026-11-12T14:02:21Z",
+   "request_id": "req_a2"
+  },
+  {
+   "charge_id": "ch_8401",
+   "order_id": "88400",
+   "amount_cents": 2250,
+   "status": "captured",
+   "at": "2026-11-12T16:40:05Z",
+   "request_id": "req_d1"
+  },
+  {
+   "charge_id": "ch_8402",
+   "order_id": "88400",
+   "amount_cents": 2250,
+   "status": "captured",
+   "at": "2026-11-12T16:40:16Z",
+   "request_id": "req_d2"
+  },
+  {
+   "charge_id": "ch_8571",
+   "order_id": "88577",
+   "amount_cents": 4500,
+   "status": "captured",
+   "at": "2026-11-13T08:11:33Z",
+   "request_id": "req_e1"
+  },
+  {
+   "charge_id": "ch_8572",
+   "order_id": "88577",
+   "amount_cents": 4500,
+   "status": "captured",
+   "at": "2026-11-13T08:11:45Z",
+   "request_id": "req_e2"
+  },
+  {
+   "charge_id": "ch_9001",
+   "order_id": "90117",
+   "amount_cents": 8400,
+   "status": "captured",
+   "at": "2026-11-13T09:41:06Z",
+   "request_id": "req_b1"
+  },
+  {
+   "charge_id": "ch_9002",
+   "order_id": "90117",
+   "amount_cents": 8400,
+   "status": "captured",
+   "at": "2026-11-13T09:41:18Z",
+   "request_id": "req_b2"
+  },
+  {
+   "charge_id": "ch_9231",
+   "order_id": "90230",
+   "amount_cents": 12000,
+   "status": "captured",
+   "at": "2026-11-14T19:05:47Z",
+   "request_id": "req_f1"
+  },
+  {
+   "charge_id": "ch_9232",
+   "order_id": "90230",
+   "amount_cents": 12000,
+   "status": "captured",
+   "at": "2026-11-14T19:05:59Z",
+   "request_id": "req_f2"
+  },
+  {
+   "charge_id": "ch_9381",
+   "order_id": "90388",
+   "amount_cents": 5610,
+   "status": "captured",
+   "at": "2026-11-14T12:30:13Z",
+   "request_id": "req_g1"
+  },
+  {
+   "charge_id": "ch_9382",
+   "order_id": "90388",
+   "amount_cents": 5610,
+   "status": "captured",
+   "at": "2026-11-14T12:30:26Z",
+   "request_id": "req_g2"
+  },
+  {
+   "charge_id": "au_6609",
+   "order_id": "77310",
+   "amount_cents": 12950,
+   "status": "authorization_released",
+   "at": "2026-11-15T18:20:05Z",
+   "request_id": "req_c1"
+  },
+  {
+   "charge_id": "ch_6610",
+   "order_id": "77310",
+   "amount_cents": 12950,
+   "status": "captured",
+   "at": "2026-11-16T07:00:00Z",
+   "request_id": "req_c2"
+  },
+  {
+   "charge_id": "ch_7745",
+   "order_id": "77455",
+   "amount_cents": 3000,
+   "status": "captured",
+   "at": "2026-11-15T10:02:04Z",
+   "request_id": "req_h1"
+  },
+  {
+   "charge_id": "ch_7746",
+   "order_id": "77456",
+   "amount_cents": 3000,
+   "status": "captured",
+   "at": "2026-11-15T10:09:35Z",
+   "request_id": "req_h2"
+  },
+  {
+   "charge_id": "ch_7759",
+   "order_id": "77590",
+   "amount_cents": 6400,
+   "status": "captured",
+   "at": "2026-11-10T13:15:04Z",
+   "request_id": "req_i1",
+   "refunded_before_cents": 1400
+  },
+  {
+   "charge_id": "ch_9100",
+   "order_id": "91002",
+   "amount_cents": 40000,
+   "status": "captured",
+   "at": "2026-11-16T11:00:04Z",
+   "request_id": "req_j1"
+  },
+  {
+   "charge_id": "ch_9115",
+   "order_id": "91150",
+   "amount_cents": 6000,
+   "status": "captured",
+   "at": "2026-11-16T15:22:03Z",
+   "request_id": "req_k1"
+  },
+  {
+   "charge_id": "ch_9124",
+   "order_id": "91240",
+   "amount_cents": 9000,
+   "status": "captured",
+   "at": "2026-11-16T17:45:03Z",
+   "request_id": "req_l1"
+  },
+  {
+   "charge_id": "ch_9125",
+   "order_id": "91240",
+   "amount_cents": 9000,
+   "status": "captured",
+   "at": "2026-11-16T17:45:15Z",
+   "request_id": "req_l2"
+  },
+  {
+   "charge_id": "ch_9201",
+   "order_id": "92010",
+   "amount_cents": 3000,
+   "status": "captured",
+   "at": "2026-11-14T09:00:03Z",
+   "request_id": "req_m1"
+  },
+  {
+   "charge_id": "ch_9202",
+   "order_id": "92010",
+   "amount_cents": 3000,
+   "status": "captured",
+   "at": "2026-11-14T09:00:14Z",
+   "request_id": "req_m2"
+  },
+  {
+   "charge_id": "ch_9203",
+   "order_id": "92020",
+   "amount_cents": 2500,
+   "status": "captured",
+   "at": "2026-11-14T10:00:03Z",
+   "request_id": "req_n1"
+  },
+  {
+   "charge_id": "ch_9204",
+   "order_id": "92020",
+   "amount_cents": 2500,
+   "status": "captured",
+   "at": "2026-11-14T10:00:15Z",
+   "request_id": "req_n2"
+  },
+  {
+   "charge_id": "ch_9205",
+   "order_id": "92030",
+   "amount_cents": 4400,
+   "status": "captured",
+   "at": "2026-11-14T11:00:03Z",
+   "request_id": "req_o1"
+  },
+  {
+   "charge_id": "ch_9206",
+   "order_id": "92030",
+   "amount_cents": 4400,
+   "status": "captured",
+   "at": "2026-11-14T11:00:12Z",
+   "request_id": "req_o2"
+  },
+  {
+   "charge_id": "ch_9901",
+   "order_id": "99001",
+   "amount_cents": 1000,
+   "status": "captured",
+   "at": "2026-11-01T00:00:03Z",
+   "request_id": "req_z1"
+  },
+  {
+   "charge_id": "ch_9902",
+   "order_id": "99001",
+   "amount_cents": 1000,
+   "status": "captured",
+   "at": "2026-11-01T00:00:12Z",
+   "request_id": "req_z2"
+  }
+ ],
+ "order_history": {
+  "88213": [
+   [
+    "2026-11-12T14:02:09Z",
+    "created"
+   ],
+   [
+    "2026-11-12T14:02:12Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-12T14:02:21Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "88400": [
+   [
+    "2026-11-12T16:40:02Z",
+    "created"
+   ],
+   [
+    "2026-11-12T16:40:05Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-12T16:40:16Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "88577": [
+   [
+    "2026-11-13T08:11:30Z",
+    "created"
+   ],
+   [
+    "2026-11-13T08:11:33Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-13T08:11:45Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "90117": [
+   [
+    "2026-11-13T09:41:03Z",
+    "created"
+   ],
+   [
+    "2026-11-13T09:41:06Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-13T09:41:18Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "90230": [
+   [
+    "2026-11-14T19:05:44Z",
+    "created"
+   ],
+   [
+    "2026-11-14T19:05:47Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-14T19:05:59Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "90388": [
+   [
+    "2026-11-14T12:30:10Z",
+    "created"
+   ],
+   [
+    "2026-11-14T12:30:13Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-14T12:30:26Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "77310": [
+   [
+    "2026-11-15T18:20:00Z",
+    "created"
+   ],
+   [
+    "2026-11-15T18:20:05Z",
+    "payment authorized"
+   ],
+   [
+    "2026-11-16T07:00:00Z",
+    "authorization released; payment captured at shipping"
+   ]
+  ],
+  "77455": [
+   [
+    "2026-11-15T10:02:00Z",
+    "created"
+   ],
+   [
+    "2026-11-15T10:02:04Z",
+    "payment captured"
+   ]
+  ],
+  "77456": [
+   [
+    "2026-11-15T10:09:31Z",
+    "created"
+   ],
+   [
+    "2026-11-15T10:09:35Z",
+    "payment captured"
+   ]
+  ],
+  "77590": [
+   [
+    "2026-11-10T13:15:00Z",
+    "created"
+   ],
+   [
+    "2026-11-10T13:15:04Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-12T09:00:00Z",
+    "partial refund of 1400 cents for a damaged cable"
+   ]
+  ],
+  "91002": [
+   [
+    "2026-11-16T11:00:00Z",
+    "created"
+   ],
+   [
+    "2026-11-16T11:00:04Z",
+    "payment captured"
+   ]
+  ],
+  "91150": [
+   [
+    "2026-11-16T15:22:00Z",
+    "created"
+   ],
+   [
+    "2026-11-16T15:22:03Z",
+    "payment captured"
+   ]
+  ],
+  "91240": [
+   [
+    "2026-11-16T17:45:00Z",
+    "created"
+   ],
+   [
+    "2026-11-16T17:45:03Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-16T17:45:15Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "92010": [
+   [
+    "2026-11-14T09:00:00Z",
+    "created"
+   ],
+   [
+    "2026-11-14T09:00:03Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-14T09:00:14Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "92020": [
+   [
+    "2026-11-14T10:00:00Z",
+    "created"
+   ],
+   [
+    "2026-11-14T10:00:03Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-14T10:00:15Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ],
+  "92030": [
+   [
+    "2026-11-14T11:00:00Z",
+    "created"
+   ],
+   [
+    "2026-11-14T11:00:03Z",
+    "payment captured"
+   ],
+   [
+    "2026-11-14T11:00:12Z",
+    "checkout retried after a gateway timeout; payment captured"
+   ]
+  ]
+ }
+}
