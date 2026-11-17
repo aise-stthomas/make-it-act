@@ -45,11 +45,22 @@ if [ -z "$API_ID" ] || [ "$API_ID" = "None" ]; then
   aws apigatewayv2 create-stage --api-id "$API_ID" --stage-name '$default' --auto-deploy >/dev/null
 fi
 API_URL="https://${API_ID}.execute-api.us-east-1.amazonaws.com"
+mkdir -p build
 
 echo "building the package..."
-mkdir -p build && rm -f build/p3.zip && zip -qr build/p3.zip src data/seed -x '*__pycache__*'
+rm -f build/p3.zip && zip -qr build/p3.zip src data/seed -x '*__pycache__*'
 
-ENV="Variables={GEMINI_API_KEY=${GEMINI_API_KEY},LAB_TOKEN=${LAB_TOKEN},STORE=dynamodb,TABLE_PREFIX=${PREFIX},ORDERS_URL=${API_URL}/mcp/orders,PAYMENTS_URL=${API_URL}/mcp/payments,WORKER_FUNCTION=p3-worker,CRASH_AFTER_EFFECT=${CRASH}}"
+# The functions' settings, written to a file so that no value is ever echoed by the AWS CLI.
+GEMINI_API_KEY="$GEMINI_API_KEY" LAB_TOKEN="$LAB_TOKEN" PREFIX="$PREFIX" API_URL="$API_URL" CRASH="$CRASH" python3 - <<'PY'
+import json, os
+v = {"GEMINI_API_KEY": os.environ["GEMINI_API_KEY"], "LAB_TOKEN": os.environ["LAB_TOKEN"], "STORE": "dynamodb",
+     "TABLE_PREFIX": os.environ["PREFIX"], "ORDERS_URL": os.environ["API_URL"] + "/mcp/orders",
+     "PAYMENTS_URL": os.environ["API_URL"] + "/mcp/payments", "WORKER_FUNCTION": "p3-worker"}
+if os.environ.get("CRASH"):
+    v["CRASH_AFTER_EFFECT"] = os.environ["CRASH"]
+json.dump({"Variables": v}, open("build/env.json", "w"))
+PY
+ENV="file://build/env.json"
 deploy_fn() {   # name handler timeout
   if aws lambda get-function --function-name "p3-$1" >/dev/null 2>&1; then
     aws lambda update-function-code --function-name "p3-$1" --zip-file fileb://build/p3.zip >/dev/null
